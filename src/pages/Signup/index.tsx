@@ -1,11 +1,10 @@
 import { ASSET_PATHS } from "entities/const/path";
-import { useState } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { postSignup } from "shared/apis/signup/index.api";
 import FormInput from "shared/components/forms/FormInput";
 import Button from "shared/components/UI/Buttons/Button";
-import { PostSignupRequestBody } from "shared/types/signup";
+import { PostSignupRequestBody } from "shared/types/signup/index.type";
 
 export default function SignupPage() {
   const navigate = useNavigate();
