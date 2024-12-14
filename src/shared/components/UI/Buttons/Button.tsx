@@ -23,8 +23,15 @@ export default function Button({
       } ${
         variant === "gray"
           ? "hover:bg-customGray-700"
-          : "hover:bg-tunemate-dark"
-      } transition duration-300 ease-in-out`}
+          : variant === "primary" && !disabled
+          ? "hover:bg-tunemate-dark"
+          : ""
+      } ${
+        disabled &&
+        "bg-customGray-700 text-customGray-500 hover:bg-customGray-700"
+      }
+      
+      transition duration-300 ease-in-out`}
     >
       {children}
     </button>
