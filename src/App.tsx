@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SplashPage from "./pages/Splash";
 import OnboardingPage from "./pages/Onboard";
-import JoinPage from "pages/Join";
-import LoginPage from "pages/Login";
+import SignupPage from "pages/Signup";
+import SigninPage from "pages/Signin";
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SplashPage />} />
-          <Route path="/join" element={<JoinPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/signin" element={<SigninPage />} />
           <Route path="/onboarding" element={<OnboardingPage />} />
         </Routes>
       </Router>

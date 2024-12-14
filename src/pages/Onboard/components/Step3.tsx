@@ -18,8 +18,8 @@ export default function Step3() {
       <div className="absolute bottom-0 left-0 w-full">
         <p className="text-center">서비스가 처음이신가요?</p>
         <div className="flex flex-col space-y-[14px] mt-4">
-          <Button onClick={() => navigate("/join")}>회원가입</Button>
-          <Button onClick={() => navigate("/login")} variant="gray">
+          <Button onClick={() => navigate("/signup")}>회원가입</Button>
+          <Button onClick={() => navigate("/signin")} variant="gray">
             이미 계정이 있어요
           </Button>
         </div>
