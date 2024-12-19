@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 
 import { ASSET_PATHS } from "entities/const/path";
-import Header from "shared/components/UI/Header";
+import Header from "shared/components/Layout/Header";
+import SearchBar from "shared/components/UI/SearchBar";
+import Container from "shared/components/Layout/Container";
 
 export default function MainPage() {
+  const handleSearch = () => {};
+
+  const handleSearchResultClick = () => {};
+
   return (
     <>
       <Header>
@@ -15,9 +21,26 @@ export default function MainPage() {
           />
         </Link>
       </Header>
-      <div className="mt-5 px-6">
-        <h2 className="font-bold text-lg">방금 등록된 감상</h2>
-      </div>
+
+      <Container>
+        <div className="py-5">
+          <SearchBar
+            placeholder="좋아하는 음악을 검색해 보세요!"
+            onSearch={handleSearch}
+            searchResults={[]}
+            onResultClick={handleSearchResultClick}
+          />
+        </div>
+
+        <div className="mt-5">
+          <div className="flex justify-between items-center">
+            <h2 className="font-bold text-lg">방금 등록된 감상</h2>
+            <Link to="" className="text-customGray-450 text-sm underline">
+              전체보기
+            </Link>
+          </div>
+        </div>
+      </Container>
     </>
   );
 }
