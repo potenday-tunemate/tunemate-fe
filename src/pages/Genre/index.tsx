@@ -1,6 +1,6 @@
 import { ASSET_PATHS } from "entities/const/path";
 import { Link } from "react-router-dom";
-import Header from "shared/components/UI/Header";
+import Header from "shared/components/Layout/Header";
 
 export default function GenrePage() {
   return (
