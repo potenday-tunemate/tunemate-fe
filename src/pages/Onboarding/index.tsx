@@ -26,10 +26,10 @@ export default function OnboardingPage() {
   }, [stepParam]);
 
   return (
-    <div className="flex flex-col h-full pt-10 pb-[50px] px-6">
+    <div className="flex flex-col h-full pt-40 pb-50 px-24">
       {/* 페이지네이션 */}
       {currentStep < 3 && (
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-16">
           {steps.map((step) => (
             <button
               key={step.id}
