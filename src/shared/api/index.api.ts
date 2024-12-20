@@ -3,8 +3,10 @@ export type ApiRequestParams = Record<
   string | number | boolean | (string | number | boolean)[]
 >;
 
+const BASE_URL = "http://tunemate.site:8080/";
+
 export async function get<T>(
-  url: string,
+  endpoint: string,
   params?: ApiRequestParams
 ): Promise<T> {
   const queryString = params
@@ -17,14 +19,14 @@ export async function get<T>(
     : undefined;
 
   const response = await fetch(
-    `${url}${queryString ? `?${queryString}` : ""}`,
+    `${BASE_URL}${endpoint}${queryString ? `?${queryString}` : ""}`,
     { method: "GET" }
   );
   return response.json();
 }
 
-export async function post<T>(url: string, body: object = {}): Promise<T> {
-  const response = await fetch(url, {
+export async function post<T>(endpoint: string, body: object = {}): Promise<T> {
+  const response = await fetch(endpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
@@ -32,8 +34,8 @@ export async function post<T>(url: string, body: object = {}): Promise<T> {
   return response.json();
 }
 
-export async function put<T>(url: string, body: object = {}): Promise<T> {
-  const response = await fetch(url, {
+export async function put<T>(endpoint: string, body: object = {}): Promise<T> {
+  const response = await fetch(endpoint, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
@@ -41,7 +43,7 @@ export async function put<T>(url: string, body: object = {}): Promise<T> {
   return response.json();
 }
 
-export async function del<T>(url: string): Promise<T> {
-  const response = await fetch(url, { method: "DELETE" });
+export async function del<T>(endpoint: string): Promise<T> {
+  const response = await fetch(endpoint, { method: "DELETE" });
   return response.json();
 }
