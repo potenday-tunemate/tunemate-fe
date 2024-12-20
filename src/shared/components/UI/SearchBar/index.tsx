@@ -45,7 +45,7 @@ export default function SearchBar({
   return (
     <div className="relative">
       <span
-        className="absolute right-[10px] top-1/2 transform -translate-y-1/2 cursor-pointer"
+        className="absolute right-10 top-1/2 transform -translate-y-1/2 cursor-pointer"
         onClick={() => onSearch(inputValue)}
       >
         <img
@@ -63,7 +63,7 @@ export default function SearchBar({
         value={inputValue}
         onChange={handleInputChange}
         placeholder={placeholder || "검색해 보세요."}
-        className="w-full h-[37px] px-[10px] bg-customGray-850 text-sm placeholder-white focus:outline-none focus:border-white rounded-[8px]"
+        className="w-full h-37 px-10 bg-customGray-850 text-sm placeholder-white focus:outline-none focus:border-white rounded-8"
       />
 
       {/* {inputValue && (
@@ -83,21 +83,19 @@ export default function SearchBar({
 
       {/* 검색 결과 리스트 */}
       {showResults && (
-        <ul className="absolute left-0 right-0 bg-white text-sm shadow-lg border mt-2 py-14pxr px-24pxr max-h-60 overflow-auto rounded-[12px] z-10 lg:py-[22px] lg:px-[28px] lg:text-base">
+        <ul className="absolute left-0 right-0 bg-white text-sm shadow-lg border mt-8 py-14 px-24 max-h-240 overflow-auto rounded-12 z-10 lg:py-22 lg:px-28 lg:text-base">
           {searchResults.length > 0 ? (
             searchResults.map((result, idx) => (
               <li
                 key={idx}
-                className="py-7pxr hover:bg-gray-100 cursor-pointer"
+                className="py-7 hover:bg-gray-100 cursor-pointer"
                 onClick={() => handleResultClick(result)}
               >
                 {result}
               </li>
             ))
           ) : (
-            <li className="py-7pxr text-customGray-900">
-              검색 결과가 없습니다.
-            </li>
+            <li className="py-7 text-customGray-900">검색 결과가 없습니다.</li>
           )}
         </ul>
       )}

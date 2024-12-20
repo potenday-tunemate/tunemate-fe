@@ -54,13 +54,13 @@ export default function SignupPage() {
         </button>
       </Header>
 
-      <div className="h-full pb-[80px] px-6">
-        <div className="relative h-full mt-[30px]">
-          <h2 className="text-[22px] font-bold">회원가입</h2>
+      <div className="h-full pb-80 px-24">
+        <div className="relative h-full mt-30">
+          <h2 className="text-22 font-bold">회원가입</h2>
 
-          <div className="mt-[34px]">
+          <div className="mt-34">
             <FormProvider {...methods}>
-              <div className="flex flex-col space-y-8">
+              <div className="flex flex-col space-y-32">
                 <div>
                   <FormInput
                     label="아이디"

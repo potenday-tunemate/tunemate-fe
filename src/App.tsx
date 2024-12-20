@@ -15,7 +15,7 @@ import BottomMenu from "shared/components/Layout/BottomMenu";
 
 function App() {
   return (
-    <div className="max-w-[600px] mx-auto h-[100vh] bg-black text-white">
+    <div className="max-w-600 mx-auto h-[100vh] bg-black text-white">
       <Router>
         <AppContent />
       </Router>
@@ -25,7 +25,7 @@ function App() {
 
 function AppContent() {
   const location = useLocation();
-  const bottomMenuVisiblePaths = ["/main", "/genre", "/mypage"];
+  const bottomMenuVisiblePaths = ["/main", "/genre", "/my-page"];
 
   return (
     <>
@@ -36,7 +36,7 @@ function AppContent() {
         <Route path="/onboarding" element={<OnboardingPage />} />
         <Route path="/main" element={<MainPage />} />
         <Route path="/genre" element={<GenrePage />} />
-        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/my-page" element={<MyPage />} />
       </Routes>
       {/* BottomMenu는 특정 경로에서만 렌더링 */}
       {bottomMenuVisiblePaths.includes(location.pathname) && <BottomMenu />}

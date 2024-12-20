@@ -17,13 +17,13 @@ export default function MainPage() {
           <img
             src={`${ASSET_PATHS.ICONS}/logo/tunemate_logo_symbol.svg`}
             alt="TUNEMATE"
-            className="w-[34px] h-[34px]"
+            className="w-34 h-34"
           />
         </Link>
       </Header>
 
       <Container>
-        <div className="py-5">
+        <div className="py-30">
           <SearchBar
             placeholder="좋아하는 음악을 검색해 보세요!"
             onSearch={handleSearch}
@@ -32,7 +32,7 @@ export default function MainPage() {
           />
         </div>
 
-        <div className="mt-5">
+        <div className="mt-20">
           <div className="flex justify-between items-center">
             <h2 className="font-bold text-lg">방금 등록된 감상</h2>
             <Link to="" className="text-customGray-450 text-sm underline">

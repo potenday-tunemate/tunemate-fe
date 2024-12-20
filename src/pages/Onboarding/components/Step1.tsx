@@ -12,7 +12,7 @@ export default function Step1({ onStepChange }: Step1Props) {
 
   return (
     <div className="relative flex justify-center items-center h-full">
-      <div className="w-full max-w-[267px]">
+      <div className="w-full max-w-267">
         <img
           src={`${ASSET_PATHS.IMAGES}/onboarding/visual_1.png`}
           alt="음악에 대한 나의 감상을 기록할 수 있어요"

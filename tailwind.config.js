@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const pxToRem = require("tailwindcss-preset-px-to-rem");
+
 module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -39,5 +42,6 @@ module.exports = {
     },
     animation: { "fade-in": "fadeIn 3s ease-in-out" },
   },
+  presets: [pxToRem],
   plugins: [],
 };

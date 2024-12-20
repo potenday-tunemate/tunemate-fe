@@ -7,8 +7,8 @@ export default function BottomMenu() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <footer className="fixed bottom-0 w-full max-w-[600px] text-white left-1/2 transform -translate-x-1/2">
-      <div className="flex items-center justify-between h-[100px]">
+    <footer className="fixed bottom-0 w-full max-w-600 text-white left-1/2 transform -translate-x-1/2">
+      <div className="flex items-center justify-between h-100">
         <div className="flex-1 flex justify-center items-center">
           <Link to="/main">
             <img
@@ -30,10 +30,10 @@ export default function BottomMenu() {
           </Link>
         </div>
         <div className="flex-1 flex justify-center items-center">
-          <Link to="/mypage">
+          <Link to="/my-page">
             <img
               src={`${ASSET_PATHS.ICONS}/content/ico_my_${
-                isActive("/mypage") ? "active" : "inactive"
+                isActive("/my-page") ? "active" : "inactive"
               }.svg`}
               alt="마이페이지 바로가기"
             />

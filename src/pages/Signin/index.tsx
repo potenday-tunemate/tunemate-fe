@@ -41,7 +41,7 @@ export default function SigninPage() {
     <div className="flex flex-col h-full">
       <Header>
         <button
-          className="flex w-[32px] h-[46px] p-[10px]"
+          className="flex w-32 h-46 p-10"
           onClick={() => navigate("/onboarding?step=3")}
         >
           <img
@@ -52,13 +52,13 @@ export default function SigninPage() {
         </button>
       </Header>
 
-      <div className="h-full pb-[80px] px-6">
-        <div className="relative h-full mt-[30px]">
-          <h2 className="text-[22px] font-bold">로그인</h2>
+      <div className="h-full pb-80 px-24">
+        <div className="relative h-full mt-30">
+          <h2 className="text-22 font-bold">로그인</h2>
 
-          <div className="mt-[34px]">
+          <div className="mt-34">
             <FormProvider {...methods}>
-              <div className="flex flex-col space-y-8">
+              <div className="flex flex-col space-y-32">
                 <div>
                   <FormInput
                     label="아이디"
@@ -95,15 +95,12 @@ export default function SigninPage() {
 
               <div className="absolute bottom-0 left-0 w-full">
                 <div className="flex justify-center">
-                  <Link
-                    to="#"
-                    className="text-white text-[10px] hover:underline"
-                  >
+                  <Link to="#" className="text-white text-10 hover:underline">
                     아이디/비밀번호를 잊으셨나요?
                   </Link>
                 </div>
 
-                <div className="mt-[15px]">
+                <div className="mt-15">
                   <Button
                     type="submit"
                     onClick={handleSubmit(onSubmit)}

@@ -57,7 +57,7 @@ export default function FormInput<T extends FieldValues>({
           type={showPassword && type === "password" ? "text" : type} // 비밀번호 보이기 상태에 따라 타입 변경
           {...register(name as Path<T>, validationOptions)}
           placeholder={placeholder}
-          className={`w-full h-10 px-3 border border-customGray-800 bg-customGray-800 rounded-[10px] text-sm focus:outline-none transition-all 
+          className={`w-full h-40 px-12 border border-customGray-800 bg-customGray-800 rounded-[10px] text-sm focus:outline-none transition-all 
           ${errors ? "border-red focus:border-red" : ""} 
           ${
             readOnly
@@ -74,7 +74,7 @@ export default function FormInput<T extends FieldValues>({
               alt="아이콘"
               width={16}
               height={16}
-              className="absolute top-1/2 right-4 transform -translate-y-1/2"
+              className="absolute top-1/2 right-16 transform -translate-y-1/2"
             />
           ) : (
             <img
@@ -82,7 +82,7 @@ export default function FormInput<T extends FieldValues>({
               alt="아이콘"
               width={16}
               height={16}
-              className="absolute top-1/2 right-4 transform -translate-y-1/2"
+              className="absolute top-1/2 right-16 transform -translate-y-1/2"
             />
           )
         ) : null}
@@ -90,10 +90,9 @@ export default function FormInput<T extends FieldValues>({
         {icon && (
           <img
             src={icon}
-            alt="아이콘"
-            width={16}
-            height={16}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2"
+            alt=""
+            aria-hidden
+            className="absolute top-1/2 right-16 transform -translate-y-1/2"
           />
         )}
 
@@ -108,14 +107,14 @@ export default function FormInput<T extends FieldValues>({
             alt={showPassword ? "비밀번호 숨기기" : "비밀번호 보기"}
             width={21}
             height={21}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 cursor-pointer"
+            className="absolute top-1/2 right-16 transform -translate-y-1/2 cursor-pointer"
             onClick={togglePasswordVisibility}
           />
         )}
       </div>
 
-      {errors && <p className="mt-2 text-xs text-red">{errors.message}</p>}
-      {desc && <p className="mt-2 text-white text-[10px]">{desc}</p>}
+      {errors && <p className="mt-8 text-xs text-red">{errors.message}</p>}
+      {desc && <p className="mt-8 text-white text-10">{desc}</p>}
     </div>
   );
 }
