@@ -5,9 +5,12 @@ import FormInput from "shared/components/forms/FormInput";
 import Button from "shared/components/UI/Buttons/Button";
 import Header from "shared/components/Layout/Header";
 import { PostSignupRequestBody } from "shared/types/signup/index.type";
+import { usePostSignupMutation } from "shared/queries/auth/index.query";
 
 export default function SignupPage() {
   const navigate = useNavigate();
+
+  const { mutateAsync: signupMutate } = usePostSignupMutation();
 
   const methods = useForm({
     mode: "all",
@@ -26,12 +29,13 @@ export default function SignupPage() {
 
   const onSubmit: SubmitHandler<PostSignupRequestBody> = async (data) => {
     try {
-      // const body: PostSignupRequestBody = {
-      //   email: data.email,
-      //   password: data.password,
-      //   nickname: data.nickname,
-      // };
-      // await postSignup(body);
+      const body: PostSignupRequestBody = {
+        email: data.email,
+        password: data.password,
+        nickname: data.nickname,
+      };
+
+      await signupMutate(body);
     } catch (error) {
       console.error(error);
     }
