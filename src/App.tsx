@@ -4,13 +4,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import SplashPage from "./pages/Splash";
-import OnboardingPage from "./pages/Onboarding";
-import SignupPage from "pages/Signup";
-import SigninPage from "pages/Signin";
-import MainPage from "pages/Main";
-import GenrePage from "pages/Genre";
-import MyPage from "pages/MyPage";
+import routes from "routes";
 import BottomMenu from "shared/components/Layout/BottomMenu";
 
 function App() {
@@ -30,13 +24,9 @@ function AppContent() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<SplashPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/signin" element={<SigninPage />} />
-        <Route path="/onboarding" element={<OnboardingPage />} />
-        <Route path="/main" element={<MainPage />} />
-        <Route path="/genre" element={<GenrePage />} />
-        <Route path="/my-page" element={<MyPage />} />
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element} />
+        ))}
       </Routes>
       {/* BottomMenu는 특정 경로에서만 렌더링 */}
       {bottomMenuVisiblePaths.includes(location.pathname) && <BottomMenu />}
