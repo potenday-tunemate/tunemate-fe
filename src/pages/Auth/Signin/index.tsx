@@ -1,13 +1,12 @@
 import { ASSET_PATHS } from "entities/const/path";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { postSignup } from "shared/apis/signup/index.api";
+import { Link, useNavigate } from "react-router-dom";
 import FormInput from "shared/components/forms/FormInput";
 import Button from "shared/components/UI/Buttons/Button";
 import Header from "shared/components/Layout/Header";
-import { PostSignupRequestBody } from "shared/types/signup/index.type";
+import { PostSigninRequestBody } from "shared/types/signin/index.type";
 
-export default function SignupPage() {
+export default function SigninPage() {
   const navigate = useNavigate();
 
   const methods = useForm({
@@ -15,7 +14,6 @@ export default function SignupPage() {
     defaultValues: {
       email: "",
       password: "",
-      nickname: "",
     },
   });
 
@@ -25,15 +23,13 @@ export default function SignupPage() {
     formState: { errors, isSubmitting },
   } = methods;
 
-  const onSubmit: SubmitHandler<PostSignupRequestBody> = async (data) => {
+  const onSubmit: SubmitHandler<PostSigninRequestBody> = async (data) => {
     try {
-      const body: PostSignupRequestBody = {
-        email: data.email,
-        password: data.password,
-        nickname: data.nickname,
-      };
-
-      await postSignup(body);
+      // const body: PostSigninRequestBody = {
+      //   email: data.email,
+      //   password: data.password,
+      // };
+      // await postSignin(body);
     } catch (error) {
       console.error(error);
     }
@@ -43,7 +39,7 @@ export default function SignupPage() {
     <div className="flex flex-col h-full">
       <Header>
         <button
-          className="flex w-[32px] h-[46px] p-[10px]"
+          className="flex w-32 h-46 p-10"
           onClick={() => navigate("/onboarding?step=3")}
         >
           <img
@@ -56,7 +52,7 @@ export default function SignupPage() {
 
       <div className="h-full pb-80 px-24">
         <div className="relative h-full mt-30">
-          <h2 className="text-22 font-bold">회원가입</h2>
+          <h2 className="text-22 font-bold">로그인</h2>
 
           <div className="mt-34">
             <FormProvider {...methods}>
@@ -67,7 +63,7 @@ export default function SignupPage() {
                     name="email"
                     register={register}
                     errors={errors.email}
-                    placeholder="이메일 주소를 입력해 주세요."
+                    placeholder="가입 시 등록한 이메일 주소를 입력해 주세요."
                     required
                     validationOptions={{
                       required: "이메일 주소를 입력해 주세요.",
@@ -90,47 +86,27 @@ export default function SignupPage() {
                     required
                     validationOptions={{
                       required: "비밀번호를 입력해 주세요.",
-                      minLength: {
-                        value: 8,
-                        message: "비밀번호는 최소 8자 이상이어야 합니다.",
-                      },
-                      maxLength: {
-                        value: 20,
-                        message: "비밀번호는 최대 20자 이내여야 합니다.",
-                      },
-                      pattern: {
-                        value:
-                          /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/,
-                        message:
-                          "비밀번호는 영어, 숫자 및 특수문자를 포함해야 합니다.",
-                      },
                     }}
-                    desc="최소 8글자, 최대 20글자 /영어 + 숫자 + 특수문자 조합 구성"
-                  />
-                </div>
-
-                <div>
-                  <FormInput
-                    label="닉네임"
-                    name="nickname"
-                    register={register}
-                    errors={errors.nickname}
-                    placeholder="아름다운 멜로디"
-                    required={false}
-                    readOnly
-                    desc="자동 생성됩니다."
                   />
                 </div>
               </div>
 
               <div className="absolute bottom-0 left-0 w-full">
-                <Button
-                  type="submit"
-                  onClick={handleSubmit(onSubmit)}
-                  disabled={isSubmitting || Object.keys(errors).length > 0}
-                >
-                  가입
-                </Button>
+                <div className="flex justify-center">
+                  <Link to="#" className="text-white text-10 hover:underline">
+                    아이디/비밀번호를 잊으셨나요?
+                  </Link>
+                </div>
+
+                <div className="mt-15">
+                  <Button
+                    type="submit"
+                    onClick={handleSubmit(onSubmit)}
+                    disabled={isSubmitting || Object.keys(errors).length > 0}
+                  >
+                    로그인
+                  </Button>
+                </div>
               </div>
             </FormProvider>
           </div>
