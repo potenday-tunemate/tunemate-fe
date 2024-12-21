@@ -76,9 +76,11 @@ export default function FollowingPage() {
                   )}
                   <p className="font-semibold text-sm ml-9">{user.name}</p>
                 </div>
-                <div className="flex justify-center items-center h-26 px-14 font-semibold text-xs bg-customGray-850 rounded-full">
-                  {user.status === "FOLLOWING" ? "팔로잉" : "팔로우"}
-                </div>
+                <button
+                  className={`flex justify-center items-center h-26 px-14 font-semibold text-xs rounded-full ${user.status === "FOLLOWER" ? "bg-customGray-850" : "bg-white text-black"}`}
+                >
+                  {user.status === "FOLLOWER" ? "팔로잉" : "팔로우"}
+                </button>
               </li>
             ))}
           </ul>
