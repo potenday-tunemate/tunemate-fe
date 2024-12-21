@@ -82,15 +82,15 @@ export default function MyPage() {
         </div>
 
         <div className="flex justify-center items-center mt-20 space-x-20">
-          <p className="text-sm">
+          <Link to="/my-page/history" className="text-sm">
             감상 <span className="font-bold">{MY_PAGE_DATA.play_count}</span>개
-          </p>
-          <p className="text-sm">
+          </Link>
+          <Link to="/my-page/follower" className="text-sm">
             팔로워 <span className="font-bold">{MY_PAGE_DATA.followers}</span>명
-          </p>
-          <p className="text-sm">
+          </Link>
+          <Link to="/my-page/following" className="text-sm">
             팔로잉 <span className="font-bold">{MY_PAGE_DATA.following}</span>명
-          </p>
+          </Link>
         </div>
 
         <div className="mt-46">
