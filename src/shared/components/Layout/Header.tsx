@@ -1,4 +1,4 @@
-import { ASSET_PATHS } from "entities/const/path";
+import { ASSET_PATHS } from "shared/const/path";
 import { Link } from "react-router-dom";
 
 interface HeaderProps {
@@ -38,7 +38,7 @@ export default function Header({
               titlePosition === "center"
                 ? "text-center mx-auto"
                 : titlePosition === "left"
-                  ? "text-left"
+                  ? "text-left ml-20"
                   : "text-right"
             }`}
           >

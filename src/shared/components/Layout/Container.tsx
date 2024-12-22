@@ -3,5 +3,5 @@ interface ContainerProps {
 }
 
 export default function Container({ children }: ContainerProps) {
-  return <div className="px-24">{children}</div>;
+  return <div className="w-full px-24">{children}</div>;
 }

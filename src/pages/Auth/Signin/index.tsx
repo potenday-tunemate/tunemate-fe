@@ -4,9 +4,12 @@ import FormInput from "shared/components/forms/FormInput";
 import Button from "shared/components/UI/Buttons/Button";
 import Header from "shared/components/Layout/Header";
 import { PostSigninRequestBody } from "shared/types/signin/index.type";
+import { usePostSigninMutation } from "shared/queries/auth/index.query";
 
 export default function SigninPage() {
   const navigate = useNavigate();
+
+  const { mutateAsync: signinMutate } = usePostSigninMutation();
 
   const methods = useForm({
     mode: "all",
@@ -24,11 +27,21 @@ export default function SigninPage() {
 
   const onSubmit: SubmitHandler<PostSigninRequestBody> = async (data) => {
     try {
-      // const body: PostSigninRequestBody = {
-      //   email: data.email,
-      //   password: data.password,
-      // };
-      // await postSignin(body);
+      const body: PostSigninRequestBody = {
+        email: data.email,
+        password: data.password,
+      };
+
+      const response = await signinMutate(body);
+
+      if (response.ok && response.data) {
+        sessionStorage.setItem("access_token", response.data.access_token);
+        sessionStorage.setItem("refresh_token", response.data.refresh_token);
+
+        navigate("/main");
+      } else {
+        alert(response.message);
+      }
     } catch (error) {
       console.error(error);
     }

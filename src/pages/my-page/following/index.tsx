@@ -1,22 +1,22 @@
-import { ASSET_PATHS } from "entities/const/path";
+import { ASSET_PATHS } from "shared/const/path";
 import Container from "shared/components/Layout/Container";
 import Header from "shared/components/Layout/Header";
 
-const FOLLOWER_DATA = [
+const FOLLOWING_DATA = [
   {
     profile: null,
     name: "유저1",
-    status: "FOLLOWER",
+    status: "FOLLOWING",
   },
   {
     profile: null,
     name: "유저2",
-    status: null,
+    status: "FOLLOWING",
   },
   {
     profile: null,
     name: "유저3",
-    status: "FOLLOWER",
+    status: "FOLLOWING",
   },
 ];
 
@@ -24,29 +24,29 @@ const RECOMMENDATION_DATA = [
   {
     profile: null,
     name: "유저4",
-    status: "FOLLOWER",
+    status: "FOLLOWING",
   },
   {
     profile: null,
     name: "유저5",
-    status: "FOLLOWER",
+    status: "FOLLOWING",
   },
   {
     profile: null,
     name: "유저6",
-    status: "FOLLOWER",
+    status: "FOLLOWING",
   },
 ];
 
-export default function FollowerPage() {
+export default function FollowingPage() {
   return (
     <div>
-      <Header title="팔로워 목록" backPath="/my-page" titlePosition="left" />
+      <Header title="팔로잉 목록" backPath="/my-page" titlePosition="left" />
 
       <Container>
         <div className="px-9 pt-10">
           <ul className="flex flex-col space-y-17">
-            {FOLLOWER_DATA.map((user) => (
+            {FOLLOWING_DATA.map((user) => (
               <li key={user.name} className="flex justify-between items-center">
                 <div className="flex items-center">
                   {user.profile ? (

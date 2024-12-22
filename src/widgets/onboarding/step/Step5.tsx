@@ -1,18 +1,18 @@
-import { ASSET_PATHS } from "entities/const/path";
+import { ASSET_PATHS } from "shared/const/path";
 import Button from "shared/components/UI/Buttons/Button";
 
-interface Step2Props {
+interface Step5Props {
   onStepChange: (step: number) => void;
 }
 
-export default function Step2({ onStepChange }: Step2Props) {
+export default function Step5({ onStepChange }: Step5Props) {
   const handleNextStep = () => {
     onStepChange(3);
   };
 
   return (
     <div className="relative flex justify-center items-center h-full">
-      <div className="w-full max-w-267">
+      <div className="w-full max-w-[267px]">
         <img
           src={`${ASSET_PATHS.IMAGES}/onboarding/visual_2.png`}
           alt="음악에 대한 나의 감상을 기록할 수 있어요"

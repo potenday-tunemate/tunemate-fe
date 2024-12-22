@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import { ASSET_PATHS } from "entities/const/path";
-import SearchBar from "shared/components/UI/SearchBar";
 import Container from "shared/components/Layout/Container";
+import MainHeader from "widgets/main/MainHeader";
+import SearchBar from "widgets/main/SearchBar";
 
 export default function MainPage() {
   const handleSearch = () => {};
@@ -11,15 +11,7 @@ export default function MainPage() {
 
   return (
     <>
-      <header className="flex items-center h-58 px-24">
-        <Link to="/main">
-          <img
-            src={`${ASSET_PATHS.ICONS}/logo/tunemate_logo_symbol.svg`}
-            alt="TUNEMATE"
-            className="w-34 h-34"
-          />
-        </Link>
-      </header>
+      <MainHeader />
 
       <Container>
         <div className="py-30">

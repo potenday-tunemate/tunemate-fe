@@ -1,4 +1,4 @@
-function NotFoundPage() {
+export default function NotFoundPage() {
   return (
     <div className="flex flex-col justify-center items-center py-40">
       <h1>404 Not Found</h1>
@@ -6,5 +6,3 @@ function NotFoundPage() {
     </div>
   );
 }
-
-export default NotFoundPage;

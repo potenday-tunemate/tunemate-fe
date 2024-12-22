@@ -34,7 +34,13 @@ export default function SignupPage() {
         nickname: data.nickname,
       };
 
-      await signupMutate(body);
+      const response = await signupMutate(body);
+
+      if (response.ok) {
+        navigate("/auth/signin");
+      } else {
+        alert(response.message);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -106,10 +112,21 @@ export default function SignupPage() {
                     register={register}
                     errors={errors.nickname}
                     placeholder="아름다운 멜로디"
+                    required
+                    validationOptions={{
+                      required: "닉네임을 입력해 주세요.",
+                    }}
+                  />
+                  {/* <FormInput
+                    label="닉네임"
+                    name="nickname"
+                    register={register}
+                    errors={errors.nickname}
+                    placeholder="아름다운 멜로디"
                     required={false}
                     readOnly
                     desc="자동 생성됩니다."
-                  />
+                  /> */}
                 </div>
               </div>
 

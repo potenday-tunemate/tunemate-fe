@@ -1,4 +1,4 @@
-import { ASSET_PATHS } from "entities/const/path";
+import { ASSET_PATHS } from "shared/const/path";
 import { Link, useLocation } from "react-router-dom";
 
 export default function BottomMenu() {
@@ -7,7 +7,7 @@ export default function BottomMenu() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <footer className="fixed bottom-0 w-full max-w-600 text-white left-1/2 transform -translate-x-1/2">
+    <footer className="fixed bottom-0 w-full max-w-600 text-white bg-black left-1/2 transform -translate-x-1/2">
       <div className="flex items-center justify-between h-100">
         <div className="flex-1 flex justify-center items-center">
           <Link to="/main">
