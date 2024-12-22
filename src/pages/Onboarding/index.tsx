@@ -34,7 +34,7 @@ export default function OnboardingPage() {
             <button
               key={step.id}
               onClick={() => handleCurrentStep(step.id)}
-              className={`px-2 py-2 rounded-full text-white ${
+              className={`px-8 py-8 rounded-full text-white ${
                 currentStep === step.id
                   ? "bg-customGray-400"
                   : "bg-customGray-650"
