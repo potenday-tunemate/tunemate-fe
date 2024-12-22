@@ -12,7 +12,7 @@ export type ApiRequestParams = Record<
   string | number | boolean | (string | number | boolean)[]
 >;
 
-const BASE_URL = "http://tunemate.site:8080/";
+const BASE_URL = "http://tunemate.site:8080";
 
 export async function get<T>(
   endpoint: string,
@@ -38,7 +38,7 @@ export async function post<T>(
   endpoint: string,
   body: object = {}
 ): Promise<ApiResponse<T>> {
-  const response = await fetch(endpoint, {
+  const response = await fetch(`${BASE_URL}${endpoint}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
@@ -50,7 +50,7 @@ export async function put<T>(
   endpoint: string,
   body: object = {}
 ): Promise<ApiResponse<T>> {
-  const response = await fetch(endpoint, {
+  const response = await fetch(`${BASE_URL}${endpoint}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
@@ -59,6 +59,6 @@ export async function put<T>(
 }
 
 export async function del<T>(endpoint: string): Promise<ApiResponse<T>> {
-  const response = await fetch(endpoint, { method: "DELETE" });
+  const response = await fetch(`${BASE_URL}${endpoint}`, { method: "DELETE" });
   return response.json();
 }
