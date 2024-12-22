@@ -40,27 +40,20 @@ export default function MyPage() {
 
   return (
     <>
-      <Header>
-        <div className="flex justify-between items-center w-full">
-          <Link to="/main">
-            <img
-              src={`${ASSET_PATHS.ICONS}/basic/ico_arrow_left.svg`}
-              alt="뒤로가기"
-              className="w-34 h-34"
-            />
-          </Link>
-          <button
-            onClick={() => setSheetVisible(true)}
-            className="flex justify-center items-center w-24 h-24"
-          >
-            <img
-              src={`${ASSET_PATHS.ICONS}/basic/ico_setting.svg`}
-              alt="설정"
-              className="w-full"
-            />
-          </button>
-        </div>
-      </Header>
+      <div className="relative">
+        <Header backPath="/main" />
+
+        <button
+          onClick={() => setSheetVisible(true)}
+          className="absolute right-24 top-1/2 -translate-y-1/2 flex justify-center items-center w-24 h-24"
+        >
+          <img
+            src={`${ASSET_PATHS.ICONS}/basic/ico_setting.svg`}
+            alt="설정"
+            className="w-full"
+          />
+        </button>
+      </div>
 
       <Container>
         <div className="flex flex-col items-center justify-center">

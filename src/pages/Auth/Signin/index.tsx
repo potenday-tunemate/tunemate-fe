@@ -1,4 +1,3 @@
-import { ASSET_PATHS } from "entities/const/path";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import FormInput from "shared/components/forms/FormInput";
@@ -37,18 +36,7 @@ export default function SigninPage() {
 
   return (
     <div className="flex flex-col h-full">
-      <Header>
-        <button
-          className="flex w-32 h-46 p-10"
-          onClick={() => navigate("/onboarding?step=3")}
-        >
-          <img
-            src={`${ASSET_PATHS.ICONS}/basic/ico_arrow_left.svg`}
-            alt="뒤로가기"
-            className="w-full"
-          />
-        </button>
-      </Header>
+      <Header backPath="/onboarding?step=3" />
 
       <div className="h-full pb-80 px-24">
         <div className="relative h-full mt-30">

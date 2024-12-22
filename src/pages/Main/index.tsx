@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 import { ASSET_PATHS } from "entities/const/path";
-import Header from "shared/components/Layout/Header";
 import SearchBar from "shared/components/UI/SearchBar";
 import Container from "shared/components/Layout/Container";
 
@@ -12,7 +11,7 @@ export default function MainPage() {
 
   return (
     <>
-      <Header>
+      <header className="flex items-center h-58 px-24">
         <Link to="/main">
           <img
             src={`${ASSET_PATHS.ICONS}/logo/tunemate_logo_symbol.svg`}
@@ -20,7 +19,7 @@ export default function MainPage() {
             className="w-34 h-34"
           />
         </Link>
-      </Header>
+      </header>
 
       <Container>
         <div className="py-30">

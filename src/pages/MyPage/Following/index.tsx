@@ -1,5 +1,4 @@
 import { ASSET_PATHS } from "entities/const/path";
-import { Link } from "react-router-dom";
 import Container from "shared/components/Layout/Container";
 import Header from "shared/components/Layout/Header";
 
@@ -42,18 +41,7 @@ const RECOMMENDATION_DATA = [
 export default function FollowingPage() {
   return (
     <div>
-      <Header>
-        <div className="flex items-center w-full">
-          <Link to="/my-page">
-            <img
-              src={`${ASSET_PATHS.ICONS}/basic/ico_arrow_left.svg`}
-              alt="뒤로가기"
-              className="w-34 h-34"
-            />
-          </Link>
-          <p className="ml-20 font-bold text-lg">팔로잉 목록</p>
-        </div>
-      </Header>
+      <Header title="팔로잉 목록" backPath="/my-page" titlePosition="left" />
 
       <Container>
         <div className="px-9 pt-10">
