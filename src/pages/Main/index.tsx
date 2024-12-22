@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import Container from "shared/components/Layout/Container";
 import MainHeader from "widgets/main/MainHeader";
+import RecentReviewsPreviewList from "widgets/main/RecentReviewsPreviewList";
+import RecommendList from "widgets/main/RecommendList";
 import SearchBar from "widgets/main/SearchBar";
 
 export default function MainPage() {
@@ -23,13 +25,12 @@ export default function MainPage() {
           />
         </div>
 
-        <div className="mt-20">
-          <div className="flex justify-between items-center">
-            <h2 className="font-bold text-lg">방금 등록된 감상</h2>
-            <Link to="" className="text-customGray-450 text-sm underline">
-              전체보기
-            </Link>
-          </div>
+        <div className="mt-6">
+          <RecentReviewsPreviewList />
+        </div>
+
+        <div className="mt-40">
+          <RecommendList />
         </div>
       </Container>
     </>
