@@ -9,7 +9,7 @@ import BottomMenu from "shared/components/Layout/BottomMenu";
 
 function App() {
   return (
-    <div className="max-w-600 mx-auto h-[100vh] bg-black text-white">
+    <div className="max-w-600 mx-auto h-screen bg-black text-white">
       <Router>
         <AppContent />
       </Router>

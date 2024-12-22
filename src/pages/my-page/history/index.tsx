@@ -32,8 +32,11 @@ export default function HistoryPage() {
 
       <Container>
         <div className="flex flex-col space-y-12">
-          {histories.map((history) => (
-            <div className="relative h-200 p-18 bg-customGray-850 rounded-10">
+          {histories.map((history, idx) => (
+            <div
+              key={`history-${idx}`}
+              className="relative h-200 p-18 bg-customGray-850 rounded-10"
+            >
               <button
                 onClick={() => setSheetVisible(true)}
                 className="absolute top-18 right-18"
