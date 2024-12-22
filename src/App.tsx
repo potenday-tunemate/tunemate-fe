@@ -19,7 +19,12 @@ function App() {
 
 function AppContent() {
   const location = useLocation();
-  const bottomMenuVisiblePaths = ["/main", "/genre", "/my-page"];
+  const bottomMenuHiddenPaths = [
+    "/splash",
+    "/onboarding",
+    "/auth/signin",
+    "/auth/signup",
+  ];
 
   return (
     <>
@@ -29,7 +34,7 @@ function AppContent() {
         ))}
       </Routes>
       {/* BottomMenu는 특정 경로에서만 렌더링 */}
-      {bottomMenuVisiblePaths.includes(location.pathname) && <BottomMenu />}
+      {!bottomMenuHiddenPaths.includes(location.pathname) && <BottomMenu />}
     </>
   );
 }
