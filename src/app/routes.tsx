@@ -2,8 +2,8 @@ import SignInPage from "pages/auth/sign-in";
 import SignUpPage from "pages/auth/sign-up";
 import WelcomePage from "pages/auth/sign-up/welcome";
 import GenrePage from "pages/genre";
-import AlbumDetailPage from "pages/genre/AlbumDetail";
-import AlbumReviewPage from "pages/genre/AlbumReview";
+import AlbumDetailPage from "pages/genre/album-detail";
+import AlbumReviewPage from "pages/genre/album-review";
 import MainPage from "pages/main";
 import MyPage from "pages/my-page";
 import FollowerPage from "pages/my-page/follower";
@@ -50,11 +50,11 @@ const routes: RouteObject[] = [
     element: <GenrePage />,
   },
   {
-    path: "/genre/review/:albumId",
+    path: "/genre/album-review/:albumId",
     element: <AlbumReviewPage />,
   },
   {
-    path: "/genre/detail/:albumId",
+    path: "/genre/album-detail/:albumId",
     element: <AlbumDetailPage />,
   },
   {

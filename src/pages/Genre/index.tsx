@@ -116,7 +116,7 @@ export default function GenrePage() {
               <div className="flex space-x-16 overflow-x-auto">
                 {ALBUM_DATA.map((album) => (
                   <Link
-                    to={`/genre/detail/${album.id}`}
+                    to={`/genre/album-detail/${album.id}`}
                     className="flex flex-col"
                   >
                     <div
