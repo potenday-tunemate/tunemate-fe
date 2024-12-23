@@ -33,10 +33,8 @@ export default function SignInForm() {
 
       const response = await signInMutate(body);
 
-      if (response.ok && response.data) {
-        sessionStorage.setItem("access_token", response.data.access_token);
-        sessionStorage.setItem("refresh_token", response.data.refresh_token);
-        navigate("/main");
+      if (response.ok) {
+        navigate("/auth/welcome");
       } else {
         alert(response.message);
       }
