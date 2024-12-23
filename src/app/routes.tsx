@@ -2,6 +2,8 @@ import SignInPage from "pages/auth/sign-in";
 import SignUpPage from "pages/auth/sign-up";
 import WelcomePage from "pages/auth/sign-up/welcome";
 import GenrePage from "pages/genre";
+import AlbumDetailPage from "pages/genre/AlbumDetail";
+import AlbumReviewPage from "pages/genre/AlbumReview";
 import MainPage from "pages/main";
 import MyPage from "pages/my-page";
 import FollowerPage from "pages/my-page/follower";
@@ -46,6 +48,14 @@ const routes: RouteObject[] = [
   {
     path: "/genre",
     element: <GenrePage />,
+  },
+  {
+    path: "/genre/review/:albumId",
+    element: <AlbumReviewPage />,
+  },
+  {
+    path: "/genre/detail/:albumId",
+    element: <AlbumDetailPage />,
   },
   {
     path: "/my-page",
