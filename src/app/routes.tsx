@@ -3,7 +3,7 @@ import SignupPage from "pages/auth/signup";
 import GenrePage from "pages/genre";
 import MainPage from "pages/main";
 import MyPage from "pages/my-page";
-import FollowerPage from "pages/my-page/followers";
+import FollowerPage from "pages/my-page/follower";
 import FollowingPage from "pages/my-page/following";
 import HistoryPage from "pages/my-page/history";
 import NotFoundPage from "pages/notFound";
