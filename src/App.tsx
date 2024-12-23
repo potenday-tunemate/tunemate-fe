@@ -24,7 +24,15 @@ function AppContent() {
     "/onboarding",
     "/auth/sign-in",
     "/auth/sign-up",
+    "/auth/sign-up/welcome",
   ];
+
+  // 현재 경로에서 해시와 쿼리 제거
+  const cleanPath = location.pathname.replace(/\/+$/, "");
+
+  const isHiddenPath = bottomMenuHiddenPaths.some((path) =>
+    cleanPath.endsWith(path)
+  );
 
   return (
     <>
@@ -34,7 +42,7 @@ function AppContent() {
         ))}
       </Routes>
       {/* BottomMenu는 특정 경로에서만 렌더링 */}
-      {!bottomMenuHiddenPaths.includes(location.pathname) && <BottomMenu />}
+      {!isHiddenPath && <BottomMenu />}
     </>
   );
 }
