@@ -1,5 +1,5 @@
-import { ASSET_PATHS } from "shared/const/path";
-import { UserData } from "./types";
+import { ASSET_PATHS } from "shared/constants/path";
+import { UserData } from "./index.type";
 
 interface UserCardProps {
   user: UserData;

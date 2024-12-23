@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import FormInput from "shared/components/forms/FormInput";
 import Button from "shared/components/UI/Buttons/Button";
 import Header from "shared/components/Layout/Header";
-import { PostSignupRequestBody } from "shared/types/signup/index.type";
-import { usePostSignupMutation } from "shared/queries/auth/index.query";
+import { PostSignUpRequestBody } from "entities/auth/index.type";
+import { usePostSignUpMutation } from "features/auth/mutations/usePostSignUpMutation";
 
-export default function SignupPage() {
+export default function SignUpPage() {
   const navigate = useNavigate();
 
-  const { mutateAsync: signupMutate } = usePostSignupMutation();
+  const { mutateAsync: signUpMutate } = usePostSignUpMutation();
 
   const methods = useForm({
     mode: "all",
@@ -26,18 +26,18 @@ export default function SignupPage() {
     formState: { errors, isSubmitting },
   } = methods;
 
-  const onSubmit: SubmitHandler<PostSignupRequestBody> = async (data) => {
+  const onSubmit: SubmitHandler<PostSignUpRequestBody> = async (data) => {
     try {
-      const body: PostSignupRequestBody = {
+      const body: PostSignUpRequestBody = {
         email: data.email,
         password: data.password,
         nickname: data.nickname,
       };
 
-      const response = await signupMutate(body);
+      const response = await signUpMutate(body);
 
       if (response.ok) {
-        navigate("/auth/signin");
+        navigate("/auth/sign-in");
       } else {
         alert(response.message);
       }

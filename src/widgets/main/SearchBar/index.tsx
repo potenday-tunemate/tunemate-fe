@@ -1,4 +1,4 @@
-import { ASSET_PATHS } from "shared/const/path";
+import { ASSET_PATHS } from "shared/constants/path";
 import { useState } from "react";
 
 interface SearchBarProps {

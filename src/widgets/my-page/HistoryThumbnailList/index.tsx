@@ -1,6 +1,6 @@
 import { Mydata } from "../data";
 import { Link } from "react-router-dom";
-import { ASSET_PATHS } from "shared/const/path";
+import { ASSET_PATHS } from "shared/constants/path";
 
 interface HistoryListProps {
   userData: Mydata;

@@ -1,7 +1,7 @@
 export const ENDPOINTS = {
   AUTH: {
-    SIGNUP: "/auth/signup",
-    SIGNIN: "/auth/signin",
+    SIGNUP: "/auth/sign-up",
+    SIGNIN: "/auth/sign-in",
     EMAIL: "/auth/email",
     EMAIL_VERIFY: "/auth/email/verify",
   },

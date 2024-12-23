@@ -22,8 +22,8 @@ function AppContent() {
   const bottomMenuHiddenPaths = [
     "/splash",
     "/onboarding",
-    "/auth/signin",
-    "/auth/signup",
+    "/auth/sign-in",
+    "/auth/sign-up",
   ];
 
   return (

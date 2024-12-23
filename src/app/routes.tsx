@@ -1,5 +1,6 @@
-import SigninPage from "pages/auth/signin";
-import SignupPage from "pages/auth/signup";
+import SignInPage from "pages/auth/sign-in";
+import SignUpPage from "pages/auth/sign-up";
+import WelcomePage from "pages/auth/sign-up/welcome";
 import GenrePage from "pages/genre";
 import MainPage from "pages/main";
 import MyPage from "pages/my-page";
@@ -31,12 +32,16 @@ const routes: RouteObject[] = [
     element: <RecentReviewsPage />,
   },
   {
-    path: "/auth/signin",
-    element: <SigninPage />,
+    path: "/auth/sign-in",
+    element: <SignInPage />,
   },
   {
-    path: "/auth/signup",
-    element: <SignupPage />,
+    path: "/auth/sign-up",
+    element: <SignUpPage />,
+  },
+  {
+    path: "/auth/sign-up/welcome",
+    element: <WelcomePage />,
   },
   {
     path: "/genre",

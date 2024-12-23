@@ -3,13 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import FormInput from "shared/components/forms/FormInput";
 import Button from "shared/components/UI/Buttons/Button";
 import Header from "shared/components/Layout/Header";
-import { PostSigninRequestBody } from "shared/types/signin/index.type";
-import { usePostSigninMutation } from "shared/queries/auth/index.query";
+import { PostSignInRequestBody } from "entities/auth/index.type";
+import { usePostSignInMutation } from "features/auth/mutations/usePostSignInMutation";
 
-export default function SigninPage() {
+export default function SignInPage() {
   const navigate = useNavigate();
 
-  const { mutateAsync: signinMutate } = usePostSigninMutation();
+  const { mutateAsync: signInMutate } = usePostSignInMutation();
 
   const methods = useForm({
     mode: "all",
@@ -25,19 +25,18 @@ export default function SigninPage() {
     formState: { errors, isSubmitting },
   } = methods;
 
-  const onSubmit: SubmitHandler<PostSigninRequestBody> = async (data) => {
+  const onSubmit: SubmitHandler<PostSignInRequestBody> = async (data) => {
     try {
-      const body: PostSigninRequestBody = {
+      const body: PostSignInRequestBody = {
         email: data.email,
         password: data.password,
       };
 
-      const response = await signinMutate(body);
+      const response = await signInMutate(body);
 
       if (response.ok && response.data) {
         sessionStorage.setItem("access_token", response.data.access_token);
         sessionStorage.setItem("refresh_token", response.data.refresh_token);
-
         navigate("/main");
       } else {
         alert(response.message);

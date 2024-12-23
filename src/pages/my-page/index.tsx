@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ASSET_PATHS } from "shared/const/path";
+import { ASSET_PATHS } from "shared/constants/path";
 import Container from "shared/components/Layout/Container";
 import Header from "shared/components/Layout/Header";
 import BottomActionSheet from "shared/components/Layout/BottomActionSheet";

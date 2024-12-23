@@ -1,14 +1,10 @@
 import UserCard from "entities/user/UserCard";
-import { UserData } from "entities/user/types";
+import { FOLLOWER_DATA } from "../model/constants";
 
-interface FollowerListProps {
-  followers: UserData[];
-}
-
-export default function FollowerList({ followers }: FollowerListProps) {
+export default function FollowerList() {
   return (
     <ul className="flex flex-col space-y-17 px-9 pt-10">
-      {followers.map((user) => (
+      {FOLLOWER_DATA.map((user) => (
         <li key={user.name}>
           <UserCard user={user} />
         </li>

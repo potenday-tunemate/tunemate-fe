@@ -1,4 +1,4 @@
-import { ASSET_PATHS } from "shared/const/path";
+import { ASSET_PATHS } from "shared/constants/path";
 import Button from "shared/components/UI/Buttons/Button";
 
 interface Step2Props {

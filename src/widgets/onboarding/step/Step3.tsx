@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import { ASSET_PATHS } from "shared/const/path";
+import { ASSET_PATHS } from "shared/constants/path";
 import Button from "shared/components/UI/Buttons/Button";
 
 export default function Step3() {
@@ -18,8 +18,8 @@ export default function Step3() {
       <div className="absolute bottom-0 left-0 w-full">
         <p className="text-center">서비스가 처음이신가요?</p>
         <div className="flex flex-col space-y-14 mt-16">
-          <Button onClick={() => navigate("/auth/signup")}>회원가입</Button>
-          <Button onClick={() => navigate("/auth/signin")} variant="gray">
+          <Button onClick={() => navigate("/auth/sign-up")}>회원가입</Button>
+          <Button onClick={() => navigate("/auth/sign-in")} variant="gray">
             이미 계정이 있어요
           </Button>
         </div>
