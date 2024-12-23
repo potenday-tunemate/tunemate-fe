@@ -7,7 +7,7 @@ import MyPage from "pages/my-page";
 import FollowerPage from "pages/my-page/follower";
 import FollowingPage from "pages/my-page/following";
 import HistoryPage from "pages/my-page/history";
-import NotFoundPage from "pages/notFound";
+import NotFoundPage from "pages/not-found";
 import OnboardingPage from "pages/onboarding";
 import RecentReviewsPage from "pages/recent-reviews";
 import SplashPage from "pages/splash";
