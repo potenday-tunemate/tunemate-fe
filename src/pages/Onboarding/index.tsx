@@ -1,7 +1,7 @@
-import Step1 from "widgets/onboarding/step/Step1";
-import Step2 from "widgets/onboarding/step/Step2";
-import Step3 from "widgets/onboarding/step/Step3";
-import Pagination from "widgets/onboarding/Pagination";
+import Step1 from "widgets/onboarding/ui/Step/Step1";
+import Step2 from "widgets/onboarding/ui/Step/Step2";
+import Step3 from "widgets/onboarding/ui/Step/Step3";
+import Pagination from "widgets/onboarding/ui/Pagination";
 import useOnboardingSteps from "features/onboarding/useOnboardingSteps";
 
 export default function OnboardingPage() {

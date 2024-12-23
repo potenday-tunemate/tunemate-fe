@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { RECENT_REVIEWS_DATA } from "../data";
+import { RECENT_REVIEWS_DATA } from "../../data";
 
 export default function RecentReviewsPreviewList() {
   return (

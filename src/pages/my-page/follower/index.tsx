@@ -1,8 +1,7 @@
-import { UserData } from "entities/user/index.type";
 import Container from "shared/components/Layout/Container";
 import Header from "shared/components/Layout/Header";
-import FollowerList from "widgets/my-page/follower/FollowerList";
-import RecommendationList from "widgets/my-page/follower/RecommendationList";
+import FollowerList from "widgets/my-page/follower/ui/FollowerList";
+import RecommendationList from "widgets/my-page/follower/ui/RecommendationList";
 
 export default function FollowerPage() {
   return (

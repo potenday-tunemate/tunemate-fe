@@ -1,4 +1,4 @@
-import SplashLogo from "widgets/splash/SplashLogo";
+import SplashLogo from "widgets/splash/ui/SplashLogo";
 
 export default function SplashPage() {
   return <SplashLogo />;

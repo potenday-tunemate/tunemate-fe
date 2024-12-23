@@ -1,4 +1,4 @@
-import UserCard from "entities/user/UserCard";
+import UserCard from "widgets/my-page/ui/UserCard";
 import { FOLLOWING_DATA } from "../model/constants";
 
 export default function FollowingList() {

@@ -3,9 +3,9 @@ import { ASSET_PATHS } from "shared/constants/path";
 import Container from "shared/components/Layout/Container";
 import Header from "shared/components/Layout/Header";
 import BottomActionSheet from "shared/components/Layout/BottomActionSheet";
-import UserInfo from "widgets/my-page/UserInfo";
-import HistoryThumbnailList from "widgets/my-page/HistoryThumbnailList";
 import { MY_DATA } from "widgets/my-page/data";
+import UserInfo from "widgets/my-page/ui/UserInfo";
+import HistoryThumbnailList from "widgets/my-page/ui/HistoryThumbnailList";
 
 export default function MyPage() {
   const [isSheetVisible, setSheetVisible] = useState(false);
