@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ASSET_PATHS } from "shared/constants/path";
-import { Mydata } from "../data";
+import { Mydata } from "widgets/my-page/data";
 
 interface ProfileProps {
   userData: Mydata;

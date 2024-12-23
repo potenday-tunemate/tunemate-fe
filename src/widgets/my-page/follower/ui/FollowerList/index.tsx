@@ -1,5 +1,5 @@
 import UserCard from "widgets/my-page/ui/UserCard";
-import { FOLLOWER_DATA } from "../model/constants";
+import { FOLLOWER_DATA } from "../../model/constants";
 
 export default function FollowerList() {
   return (

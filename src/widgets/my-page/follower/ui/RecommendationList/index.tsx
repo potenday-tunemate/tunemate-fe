@@ -1,5 +1,5 @@
 import UserCard from "widgets/my-page/ui/UserCard";
-import { RECOMMENDATION_DATA } from "../model/constants";
+import { RECOMMENDATION_DATA } from "../../model/constants";
 
 export default function RecommendationList() {
   return (
