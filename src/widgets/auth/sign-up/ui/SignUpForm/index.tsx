@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import FormInput from "shared/components/forms/FormInput";
-import Button from "shared/components/UI/Buttons/Button";
+import Button from "shared/components/ui/buttons/Button";
 import { PostSignUpRequestBody } from "entities/auth/index.type";
 import { usePostSignUpMutation } from "features/auth/mutations/usePostSignUpMutation";
 
@@ -108,19 +108,19 @@ export default function SignUpForm() {
             }}
           />
           {/* <FormInput
-        label="닉네임"
-        name="nickname"
-        register={register}
-        errors={errors.nickname}
-        placeholder="아름다운 멜로디"
-        required={false}
-        readOnly
-        desc="자동 생성됩니다."
-      /> */}
+              label="닉네임"
+              name="nickname"
+              register={register}
+              errors={errors.nickname}
+              placeholder="아름다운 멜로디"
+              required={false}
+              readOnly
+              desc="자동 생성됩니다."
+            /> */}
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full">
+      <div className="absolute bottom-0 left-0 w-full px-24">
         <Button
           type="submit"
           onClick={handleSubmit(onSubmit)}

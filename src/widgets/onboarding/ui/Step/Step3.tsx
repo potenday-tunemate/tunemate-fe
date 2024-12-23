@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 import { ASSET_PATHS } from "shared/constants/path";
-import Button from "shared/components/UI/Buttons/Button";
+import Button from "shared/components/ui/buttons/Button";
 
 export default function Step3() {
   const navigate = useNavigate();
 
   return (
-    <div className="relative flex justify-center items-center h-full">
+    <div className="relative flex justify-center items-center h-screen">
       <div className="w-full max-w-197">
         <img
           src={`${ASSET_PATHS.ICONS}/logo/tunemate_logo.svg`}

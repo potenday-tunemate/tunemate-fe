@@ -1,7 +1,7 @@
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import FormInput from "shared/components/forms/FormInput";
-import Button from "shared/components/UI/Buttons/Button";
+import Button from "shared/components/ui/buttons/Button";
 import { PostSignInRequestBody } from "entities/auth/index.type";
 import { usePostSignInMutation } from "features/auth/mutations/usePostSignInMutation";
 
@@ -88,7 +88,7 @@ export default function SignInForm() {
           </Link>
         </div>
 
-        <div className="mt-15">
+        <div className="absolute bottom-0 left-0 w-full px-24">
           <Button
             type="submit"
             onClick={handleSubmit(onSubmit)}

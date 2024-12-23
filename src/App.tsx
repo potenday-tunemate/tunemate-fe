@@ -5,11 +5,11 @@ import {
   useLocation,
 } from "react-router-dom";
 import routes from "app/routes";
-import BottomMenu from "shared/components/Layout/BottomMenu";
+import BottomMenu from "shared/components/layout/BottomMenu";
 
 function App() {
   return (
-    <div className="max-w-600 mx-auto h-screen bg-black text-white">
+    <div className="relative max-w-600 mx-auto min-h-screen bg-black text-white">
       <Router>
         <AppContent />
       </Router>

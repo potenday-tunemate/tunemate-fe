@@ -1,29 +1,27 @@
-interface ButtonProps {
+import { Link } from "react-router-dom";
+
+interface LinkButtonProps {
   children: string;
-  type?: "button" | "submit" | "reset";
   variant?: "primary" | "gray" | "outlined" | string;
   disabled?: boolean;
-  onClick?: () => void;
+  path: string;
 }
 
-export default function Button({
+export default function LinkButton({
   children,
-  type = "button",
   variant = "primary",
   disabled = false,
-  onClick,
-}: ButtonProps) {
+  path,
+}: LinkButtonProps) {
   return (
-    <button
-      type={type}
-      disabled={disabled}
-      onClick={disabled ? undefined : onClick}
+    <Link
+      to={path}
       className={`flex justify-center items-center w-full rounded-10 text-white font-semibold h-40 ${
         variant === "gray" ? "bg-customGray-800" : "bg-tunemate"
       } ${disabled && "bg-customGray-700 text-customGray-500"}
       transition duration-300 ease-in-out`}
     >
       {children}
-    </button>
+    </Link>
   );
 }

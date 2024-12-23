@@ -1,8 +1,9 @@
-import Header from "shared/components/Layout/Header";
+import Header from "shared/components/layout/Header";
+import PageLayout from "shared/components/layout/PageLayout";
 
 export default function GenrePage() {
   return (
-    <>
+    <PageLayout>
       <Header backPath="/main" />
       <div className="mt-12 px-24 flex flex-col space-y-50">
         <div>
@@ -15,6 +16,6 @@ export default function GenrePage() {
           <h2>name님에게 추천해요!</h2>
         </div>
       </div>
-    </>
+    </PageLayout>
   );
 }

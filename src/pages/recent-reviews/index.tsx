@@ -1,10 +1,11 @@
-import Container from "shared/components/Layout/Container";
-import Header from "shared/components/Layout/Header";
+import Container from "shared/components/layout/Container";
+import Header from "shared/components/layout/Header";
+import PageLayout from "shared/components/layout/PageLayout";
 import { RECENT_REVIEWS_DATA } from "widgets/main/data";
 
 export default function RecentReviewsPage() {
   return (
-    <div>
+    <PageLayout>
       <Header backPath="/main" title="방금 등록된 감상" />
 
       <div className="mt-10">
@@ -48,6 +49,6 @@ export default function RecentReviewsPage() {
           </div>
         </Container>
       </div>
-    </div>
+    </PageLayout>
   );
 }

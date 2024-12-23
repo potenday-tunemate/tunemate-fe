@@ -13,9 +13,9 @@ export default function Header({
   titlePosition = "center",
 }: HeaderProps) {
   return (
-    <header className="flex items-center h-58 px-24">
+    <header className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-600 mx-auto flex items-center h-68 px-24 bg-black z-10">
       <div
-        className={`relative flex items-center w-full ${
+        className={`relative flex items-center w-full h-full ${
           titlePosition === "right" ? "justify-between" : ""
         }`}
       >

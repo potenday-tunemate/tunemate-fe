@@ -8,10 +8,10 @@ interface ProfileProps {
 
 export default function UserInfo({ userData }: ProfileProps) {
   return (
-    <>
+    <div>
       {userData && (
         <div className="flex flex-col items-center justify-center">
-          <div>
+          <div className="flex justify-center w-full">
             {userData.profile ? (
               <img src={userData.profile} alt="profile" className="w-80" />
             ) : (
@@ -23,12 +23,12 @@ export default function UserInfo({ userData }: ProfileProps) {
             )}
           </div>
 
-          <div className="mt-10">
+          <div className="flex justify-center w-full mt-10">
             <p>{userData.user_name}</p>
           </div>
 
           {/* 감상, 팔로워, 팔로잉 섹션 */}
-          <div className="flex justify-center items-center mt-20 space-x-20">
+          <div className="flex justify-center w-full mt-20 space-x-20">
             <Link to="/my-page/history" className="text-sm">
               감상 <span className="font-bold">{userData.play_count}</span>개
             </Link>
@@ -41,7 +41,7 @@ export default function UserInfo({ userData }: ProfileProps) {
           </div>
 
           {/* 사용자가 좋아하는 장르 섹션 */}
-          <div className="pt-16 mt-30 border-t border-customGray-850">
+          <div className="flex flex-col justify-center items-center w-full pt-16 mt-30 border-t border-customGray-850">
             <p className="font-bold">
               {userData.user_name}님이 가장 좋아하는 장르
             </p>
@@ -55,6 +55,6 @@ export default function UserInfo({ userData }: ProfileProps) {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

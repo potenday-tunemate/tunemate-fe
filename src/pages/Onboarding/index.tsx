@@ -13,7 +13,7 @@ export default function OnboardingPage() {
   ];
 
   return (
-    <div className="flex flex-col h-full pt-40 pb-50 px-24">
+    <div className="flex flex-col h-screen pt-40 pb-50 px-24">
       {/* 페이지네이션 */}
       {currentStep < 3 && (
         <Pagination

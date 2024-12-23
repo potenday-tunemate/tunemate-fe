@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-
-import Container from "shared/components/Layout/Container";
+import Container from "shared/components/layout/Container";
+import PageLayout from "shared/components/layout/PageLayout";
 import MainHeader from "widgets/main/ui/MainHeader";
 import RecentReviewsPreviewList from "widgets/main/ui/RecentReviewsPreviewList";
 import RecommendList from "widgets/main/ui/RecommendList";
@@ -12,7 +11,7 @@ export default function MainPage() {
   const handleSearchResultClick = () => {};
 
   return (
-    <>
+    <PageLayout>
       <MainHeader />
 
       <Container>
@@ -33,6 +32,6 @@ export default function MainPage() {
           <RecommendList />
         </div>
       </Container>
-    </>
+    </PageLayout>
   );
 }

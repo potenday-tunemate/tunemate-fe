@@ -1,5 +1,5 @@
 import { ASSET_PATHS } from "shared/constants/path";
-import Button from "shared/components/UI/Buttons/Button";
+import Button from "shared/components/ui/buttons/Button";
 
 interface Step5Props {
   onStepChange: (step: number) => void;

@@ -1,4 +1,4 @@
-import Button from "shared/components/UI/Buttons/Button";
+import Button from "shared/components/ui/buttons/Button";
 
 interface Step4Props {
   onStepChange: (step: number) => void;
