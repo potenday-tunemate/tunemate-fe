@@ -32,11 +32,11 @@ export default function HistoryThumbnailList({ userData }: HistoryListProps) {
                   key={`history-${idx}`}
                   className="w-full aspect-square rounded-10 relative"
                 >
-                  {history.cover ? (
+                  {history.coverImg ? (
                     <img
-                      src={history.cover}
+                      src={history.coverImg}
                       alt={history.title}
-                      className="absolute inset-0 w-full h-full object-cover rounded-10"
+                      className="absolute inset-0 w-full h-full object-coverImg rounded-10"
                     />
                   ) : (
                     <div className="absolute inset-0 w-full h-full bg-customGray-850 rounded-10"></div>

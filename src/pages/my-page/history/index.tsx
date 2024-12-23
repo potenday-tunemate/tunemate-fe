@@ -50,8 +50,8 @@ export default function HistoryPage() {
 
               <div className="flex space-x-14">
                 <div className="w-80 h-80 rounded-10 overflow-hidden">
-                  {history.cover ? (
-                    <img src={history.cover} alt={history.title} />
+                  {history.coverImg ? (
+                    <img src={history.coverImg} alt={history.title} />
                   ) : (
                     <div className="w-full h-full bg-customGray-700"></div>
                   )}

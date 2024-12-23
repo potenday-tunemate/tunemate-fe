@@ -1,6 +1,6 @@
 interface History {
   id: string;
-  cover: string | null;
+  coverImg: string | null;
   title: string;
   artist: string;
   writer: string;
@@ -31,7 +31,7 @@ export const MY_DATA: Mydata = {
   histories: [
     {
       id: "1",
-      cover: null,
+      coverImg: null,
       title: "앨범 타이틀1",
       artist: "아티스트1",
       writer: "작성자1",
@@ -41,7 +41,7 @@ export const MY_DATA: Mydata = {
     },
     {
       id: "2",
-      cover: null,
+      coverImg: null,
       title: "앨범 타이틀2",
       artist: "아티스트2",
       writer: "작성자2",
@@ -51,7 +51,7 @@ export const MY_DATA: Mydata = {
     },
     {
       id: "3",
-      cover: null,
+      coverImg: null,
       title: "앨범 타이틀3",
       artist: "아티스트3",
       writer: "작성자3",
@@ -61,7 +61,7 @@ export const MY_DATA: Mydata = {
     },
     {
       id: "4",
-      cover: null,
+      coverImg: null,
       title: "앨범 타이틀4",
       artist: "아티스트4",
       writer: "작성자4",

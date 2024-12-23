@@ -18,8 +18,8 @@ export default function RecentReviewsPage() {
               >
                 <div className="flex space-x-14">
                   <div className="w-80 h-80 rounded-10 overflow-hidden">
-                    {review.cover ? (
-                      <img src={review.cover} alt={review.title} />
+                    {review.coverImg ? (
+                      <img src={review.coverImg} alt={review.title} />
                     ) : (
                       <div className="w-full h-full bg-customGray-700"></div>
                     )}

@@ -1,6 +1,6 @@
 interface History {
   id: string;
-  cover: string | null;
+  coverImg: string | null;
   title: string;
   artist: string;
   genre: string;
@@ -13,7 +13,7 @@ interface History {
 export const RECENT_REVIEWS_DATA: History[] = [
   {
     id: "1",
-    cover: null,
+    coverImg: null,
     title: "앨범 타이틀1",
     artist: "아티스트1",
     writer: "작성자1",
@@ -24,7 +24,7 @@ export const RECENT_REVIEWS_DATA: History[] = [
   },
   {
     id: "2",
-    cover: null,
+    coverImg: null,
     title: "앨범 타이틀2",
     artist: "아티스트2",
     writer: "작성자2",
@@ -35,7 +35,7 @@ export const RECENT_REVIEWS_DATA: History[] = [
   },
   {
     id: "3",
-    cover: null,
+    coverImg: null,
     title: "앨범 타이틀3",
     artist: "아티스트3",
     writer: "작성자3",
@@ -46,7 +46,7 @@ export const RECENT_REVIEWS_DATA: History[] = [
   },
   {
     id: "4",
-    cover: null,
+    coverImg: null,
     title: "앨범 타이틀4",
     artist: "아티스트4",
     writer: "작성자4",
