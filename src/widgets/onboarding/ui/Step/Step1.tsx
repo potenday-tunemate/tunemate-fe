@@ -1,5 +1,5 @@
 import { ASSET_PATHS } from "shared/constants/path";
-import Button from "shared/components/ui/buttons/Button";
+import StickyButton from "shared/components/ui/buttons/StickyButton";
 
 interface Step1Props {
   onStepChange: (step: number) => void;
@@ -11,19 +11,17 @@ export default function Step1({ onStepChange }: Step1Props) {
   };
 
   return (
-    <div className="relative flex justify-center items-center h-full">
-      <div className="w-full max-w-267">
+    <div className="flex flex-col items-center justify-center h-screen">
+      <div className="w-full max-w-267 -mt-100">
         <img
           src={`${ASSET_PATHS.IMAGES}/onboarding/visual_1.png`}
           alt="음악에 대한 나의 감상을 기록할 수 있어요"
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full">
-        <Button type="button" variant="gray" onClick={handleNextStep}>
-          다음
-        </Button>
-      </div>
+      <StickyButton type="button" variant="gray" onClick={handleNextStep}>
+        다음
+      </StickyButton>
     </div>
   );
 }
