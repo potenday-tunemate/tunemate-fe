@@ -2,7 +2,7 @@
 export interface PostSignUpRequestBody {
   email: string;
   password: string;
-  nickname: string;
+  nickname: string | null;
 }
 
 // 회원가입 응답 타입

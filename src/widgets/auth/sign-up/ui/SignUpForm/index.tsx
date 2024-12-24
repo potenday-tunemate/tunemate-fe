@@ -15,7 +15,7 @@ export default function SignUpForm() {
     defaultValues: {
       email: "",
       password: "",
-      nickname: "",
+      nickname: null,
     },
   });
 
@@ -30,7 +30,7 @@ export default function SignUpForm() {
       const body: PostSignUpRequestBody = {
         email: data.email,
         password: data.password,
-        nickname: data.nickname,
+        nickname: null,
       };
 
       const response = await signUpMutate(body);
@@ -102,25 +102,14 @@ export default function SignUpForm() {
             register={register}
             errors={errors.nickname}
             placeholder="아름다운 멜로디"
-            required
-            validationOptions={{
-              required: "닉네임을 입력해 주세요.",
-            }}
+            required={false}
+            readOnly
+            desc="자동 생성됩니다."
           />
-          {/* <FormInput
-              label="닉네임"
-              name="nickname"
-              register={register}
-              errors={errors.nickname}
-              placeholder="아름다운 멜로디"
-              required={false}
-              readOnly
-              desc="자동 생성됩니다."
-            /> */}
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full px-24">
+      <div className="absolute left-0 right-0 bottom-50 px-24">
         <Button
           type="submit"
           onClick={handleSubmit(onSubmit)}
