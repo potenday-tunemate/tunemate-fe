@@ -1,11 +1,10 @@
 import { useMutation } from "@tanstack/react-query";
+import { ApiResponse, post } from "shared/api/index.api";
+import { useAuthStore } from "../../model";
 import {
   PostSignInRequestBody,
   PostSignInResponse,
-} from "entities/auth/index.type";
-import { ApiResponse, post } from "shared/api/index.api";
-import { ENDPOINTS } from "shared/constants/endpoints";
-import { useAuthStore } from "../model";
+} from "features/auth/model/types";
 
 // 로그인 쿼리 함수
 export const usePostSignInMutation = () => {
@@ -17,7 +16,7 @@ export const usePostSignInMutation = () => {
     PostSignInRequestBody
   >({
     mutationFn: async (body: PostSignInRequestBody) => {
-      const response = await post(ENDPOINTS.AUTH.SIGNIN, body);
+      const response = await post("/auth/signin", body);
       return response as ApiResponse<PostSignInResponse>;
     },
     onSuccess: (data) => {

@@ -2,8 +2,8 @@ import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import FormInput from "shared/components/forms/FormInput";
 import Button from "shared/components/ui/buttons/Button";
-import { PostSignInRequestBody } from "entities/auth/index.type";
-import { usePostSignInMutation } from "features/auth/mutations/usePostSignInMutation";
+import { usePostSignInMutation } from "features/auth/api/mutations/usePostSignInMutation";
+import { PostSignInRequestBody } from "features/auth/model/types";
 
 export default function SignInForm() {
   const navigate = useNavigate();
