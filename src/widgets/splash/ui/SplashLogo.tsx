@@ -14,7 +14,7 @@ export default function SplashLogo() {
   }, [navigate]);
 
   return (
-    <div className="flex h-full items-center justify-center">
+    <div className="flex h-screen items-center justify-center">
       <img
         src={`${ASSET_PATHS.ICONS}/logo/tunemate_logo.svg`}
         alt="TUNEMATE"
