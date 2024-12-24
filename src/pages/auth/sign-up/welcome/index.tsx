@@ -1,4 +1,3 @@
-import Container from "shared/components/layout/Container";
 import LinkButton from "shared/components/ui/buttons/LinkButton";
 
 export default function WelcomePage() {
