@@ -1,28 +1,27 @@
+import { useNavigate } from "react-router-dom";
 import Container from "shared/components/layout/Container";
-import PageLayout from "shared/components/layout/PageLayout";
 import MainHeader from "widgets/main/ui/MainHeader";
 import RecentReviewsPreviewList from "widgets/main/ui/RecentReviewsPreviewList";
 import RecommendList from "widgets/main/ui/RecommendList";
-import SearchBar from "widgets/main/ui/SearchBar";
+import SearchBar from "widgets/search/ui/SearchBar";
 
 export default function MainPage() {
-  const handleSearch = () => {};
+  const navigate = useNavigate();
 
-  const handleSearchResultClick = () => {};
+  const handleSearchBarClick = () => {
+    navigate("/search");
+  };
 
   return (
-    <PageLayout>
+    <main className="pt-56">
       <MainHeader />
 
       <Container>
-        <div className="py-30">
-          <SearchBar
-            placeholder="좋아하는 음악을 검색해 보세요!"
-            onSearch={handleSearch}
-            searchResults={[]}
-            onResultClick={handleSearchResultClick}
-          />
-        </div>
+        <SearchBar
+          placeholder="좋아하는 음악을 검색해 보세요!"
+          onClick={handleSearchBarClick}
+          viewMode={true}
+        />
 
         <div className="mt-6">
           <RecentReviewsPreviewList />
@@ -32,6 +31,6 @@ export default function MainPage() {
           <RecommendList />
         </div>
       </Container>
-    </PageLayout>
+    </main>
   );
 }

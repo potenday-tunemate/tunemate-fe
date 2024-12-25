@@ -12,6 +12,7 @@ import HistoryPage from "pages/my-page/history";
 import NotFoundPage from "pages/not-found";
 import OnboardingPage from "pages/onboarding";
 import RecentReviewsPage from "pages/recent-reviews";
+import SearchPage from "pages/search";
 import SplashPage from "pages/splash";
 import { RouteObject } from "react-router-dom";
 
@@ -28,6 +29,10 @@ const routes: RouteObject[] = [
     path: "/main",
     element: <MainPage />,
     index: true, // 기본 경로
+  },
+  {
+    path: "/search",
+    element: <SearchPage />,
   },
   {
     path: "/recent-reviews",
