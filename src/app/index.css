@@ -38,6 +38,15 @@
     url("../../public/assets/fonts/Pretendard-Regular.woff") format("woff");
 }
 
+.hidden-scroll {
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+
+.hidden-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
 body {
   font-family: "Pretendard-Regular", sans-serif;
 }
