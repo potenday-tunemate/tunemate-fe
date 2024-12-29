@@ -1,5 +1,5 @@
-import Header from "shared/components/layout/Header";
-import Container from "shared/components/layout/Container";
+import Header from "shared/components/Layout/Header";
+import Container from "shared/components/Layout/Container";
 import FollowingList from "widgets/my-page/following/ui/FollowingList";
 
 export default function FollowingPage() {
