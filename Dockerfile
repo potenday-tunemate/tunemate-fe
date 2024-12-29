@@ -1,5 +1,5 @@
 #1단계: 빌드 단계
-FROM node:18.8 AS builder
+FROM node:20-alpine AS builder
 
 # 1. 작업 디렉토리 설정
 WORKDIR /app
@@ -8,10 +8,10 @@ WORKDIR /app
 RUN corepack enable && corepack prepare yarn@stable --activate
 
 # 3. package.json과 yarn.lock 복사
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # 4. 의존성 설치 (경고 무시)
-RUN yarn install --frozen-lockfile --ignore-engines --ignore-optional
+RUN yarn install
 
 # 5. 소스 코드 전체 복사
 COPY . .
@@ -21,16 +21,16 @@ RUN yarn build
 
 
 # 2단계: 실행 단계
-FROM node:18.8
+FROM node:20-alpine AS production
 
 # 1. 작업 디렉토리 설정
 WORKDIR /app
 
 # 2. package.json과 yarn.lock 복사
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # 3. 프로덕션 의존성만 설치
-RUN yarn install --production --frozen-lockfile --ignore-engines --ignore-optional
+RUN yarn install
 
 # 4. 빌드된 React 애플리케이션 복사
 COPY --from=builder /app/build ./build
