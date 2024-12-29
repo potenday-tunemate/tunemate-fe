@@ -21,7 +21,7 @@ RUN yarn build
 
 
 # 2단계: 실행 단계
-FROM node:20-alpine
+FROM node:20-alpine AS production
 
 # 1. 작업 디렉토리 설정
 WORKDIR /app
