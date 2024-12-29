@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Container from "shared/components/layout/Container";
+import Container from "shared/components/Layout/Container";
 import MainHeader from "widgets/main/ui/MainHeader";
 import RecentReviewsPreviewList from "widgets/main/ui/RecentReviewsPreviewList";
 import RecommendList from "widgets/main/ui/RecommendList";

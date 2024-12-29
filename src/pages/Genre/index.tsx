@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Container from "shared/components/layout/Container";
-import Header from "shared/components/layout/Header";
-import PageLayout from "shared/components/layout/PageLayout";
+import Container from "shared/components/Layout/Container";
+import Header from "shared/components/Layout/Header";
+import PageLayout from "shared/components/Layout/PageLayout";
 
 const ALBUM_DATA = [
   {

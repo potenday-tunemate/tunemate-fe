@@ -1,19 +1,19 @@
 import SignInPage from "pages/auth/sign-in";
 import SignUpPage from "pages/auth/sign-up";
 import WelcomePage from "pages/auth/sign-up/welcome";
-import GenrePage from "pages/genre";
-import AlbumDetailPage from "pages/genre/album-detail";
-import AlbumReviewPage from "pages/genre/album-review";
-import MainPage from "pages/main";
+import GenrePage from "pages/Genre";
+import AlbumDetailPage from "pages/Genre/album-detail";
+import AlbumReviewPage from "pages/Genre/album-review";
+import MainPage from "pages/Main";
 import MyPage from "pages/my-page";
 import FollowerPage from "pages/my-page/follower";
 import FollowingPage from "pages/my-page/following";
 import HistoryPage from "pages/my-page/history";
 import NotFoundPage from "pages/not-found";
-import OnboardingPage from "pages/onboarding";
+import OnboardingPage from "pages/Onboarding";
 import RecentReviewsPage from "pages/recent-reviews";
 import SearchPage from "pages/search";
-import SplashPage from "pages/splash";
+import SplashPage from "pages/Splash";
 import { RouteObject } from "react-router-dom";
 
 const routes: RouteObject[] = [
