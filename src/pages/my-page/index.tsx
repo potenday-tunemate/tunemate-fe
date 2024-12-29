@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Container from "shared/components/layout/Container";
+import Container from "shared/components/Layout/Container";
 import BottomActionSheet from "shared/components/Layout/BottomActionSheet";
 import { MY_DATA } from "widgets/my-page/data";
 import UserInfo from "widgets/my-page/ui/UserInfo";
