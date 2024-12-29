@@ -8,7 +8,7 @@ WORKDIR /app
 RUN corepack enable && corepack prepare yarn@stable --activate
 
 # 3. package.json과 yarn.lock 복사
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # 4. 의존성 설치 (경고 무시)
 RUN yarn install
@@ -27,7 +27,7 @@ FROM node:20-alpine AS production
 WORKDIR /app
 
 # 2. package.json과 yarn.lock 복사
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # 3. 프로덕션 의존성만 설치
 RUN yarn install
