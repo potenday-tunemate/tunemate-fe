@@ -1,5 +1,5 @@
 #1단계: 빌드 단계
-FROM node:18.8 AS builder
+FROM node:20-alpine AS build
 
 # 1. 작업 디렉토리 설정
 WORKDIR /app
@@ -21,7 +21,7 @@ RUN yarn build
 
 
 # 2단계: 실행 단계
-FROM node:18.8
+FROM node:20-alpine
 
 # 1. 작업 디렉토리 설정
 WORKDIR /app
