@@ -1,5 +1,5 @@
 # 1단계: 빌드 단계
-FROM node:latest AS builder
+FROM node:18.8 AS builder
 
 # 작업 디렉토리 설정
 WORKDIR /app
@@ -10,8 +10,8 @@ RUN corepack enable && corepack prepare yarn@stable --activate
 # package.json과 yarn.lock 복사
 COPY package.json yarn.lock ./
 
-# 의존성 설치
-RUN yarn install --frozen-lockfile
+# 의존성 설치 (경고 무시)
+RUN yarn install --frozen-lockfile --ignore-engines --ignore-optional
 
 # 소스 코드 복사
 COPY . .
@@ -20,7 +20,7 @@ COPY . .
 RUN yarn build
 
 # 2단계: 실행 단계
-FROM node:latest
+FROM node:18.8
 
 # 작업 디렉토리 설정
 WORKDIR /app
@@ -29,7 +29,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # 프로덕션 의존성만 설치
-RUN yarn install --production --frozen-lockfile
+RUN yarn install --production --frozen-lockfile --ignore-engines --ignore-optional
 
 # 빌드된 React 애플리케이션 복사
 COPY --from=builder /app/build ./build
