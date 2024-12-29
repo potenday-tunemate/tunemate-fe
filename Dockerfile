@@ -11,7 +11,7 @@ RUN corepack enable && corepack prepare yarn@stable --activate
 COPY package.json yarn.lock ./
 
 # 4. 의존성 설치 (경고 무시)
-RUN yarn install --frozen-lockfile --ignore-engines --ignore-optional
+RUN yarn install --frozen-lockfile --ignore-engines
 
 # 5. 소스 코드 전체 복사
 COPY . .
