@@ -11,7 +11,7 @@ RUN corepack enable && corepack prepare yarn@stable --activate
 COPY package.json yarn.lock ./
 
 # 4. 의존성 설치 (경고 무시)
-RUN yarn install --frozen-lockfile --ignore-engines
+RUN yarn install
 
 # 5. 소스 코드 전체 복사
 COPY . .
@@ -30,7 +30,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # 3. 프로덕션 의존성만 설치
-RUN yarn install --production --frozen-lockfile --ignore-engines
+RUN yarn install --production
 
 # 4. 빌드된 React 애플리케이션 복사
 COPY --from=builder /app/build ./build
