@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Container from "shared/components/layout/Container";
-import BottomActionSheet from "shared/components/layout/BottomActionSheet";
+import BottomActionSheet from "shared/components/Layout/BottomActionSheet";
 import { MY_DATA } from "widgets/my-page/data";
 import UserInfo from "widgets/my-page/ui/UserInfo";
 import HistoryThumbnailList from "widgets/my-page/ui/HistoryThumbnailList";
