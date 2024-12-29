@@ -5,7 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import routes from "app/routes";
-import BottomMenu from "shared/components/layout/BottomMenu";
+import BottomMenu from "shared/components/Layout/BottomMenu";
 
 function App() {
   return (
