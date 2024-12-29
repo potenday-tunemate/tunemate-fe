@@ -1,4 +1,4 @@
-import PageLayout from "shared/components/layout/PageLayout";
+import PageLayout from "shared/components/Layout/PageLayout";
 
 export default function NotFoundPage() {
   return (
