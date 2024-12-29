@@ -4,7 +4,7 @@ import BottomActionSheet from "shared/components/Layout/BottomActionSheet";
 import { MY_DATA } from "widgets/my-page/data";
 import UserInfo from "widgets/my-page/ui/UserInfo";
 import HistoryThumbnailList from "widgets/my-page/ui/HistoryThumbnailList";
-import PageLayout from "shared/components/layout/PageLayout";
+import PageLayout from "shared/components/Layout/PageLayout";
 import MyPageHeader from "widgets/my-page/ui/MyPageHeader";
 
 export default function MyPage() {
