@@ -1,5 +1,5 @@
 import { ASSET_PATHS } from "shared/constants/path";
-import StickyButton from "shared/components/ui/buttons/StickyButton";
+import StickyButton from "shared/components/UI/Buttons/StickyButton";
 
 interface Step2Props {
   onStepChange: (step: number) => void;

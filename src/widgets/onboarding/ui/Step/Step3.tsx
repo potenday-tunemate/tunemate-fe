@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ASSET_PATHS } from "shared/constants/path";
-import Button from "shared/components/ui/buttons/Button";
+import Button from "shared/components/UI/Buttons/Button";
 
 export default function Step3() {
   const navigate = useNavigate();

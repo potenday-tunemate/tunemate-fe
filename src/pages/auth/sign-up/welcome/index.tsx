@@ -1,4 +1,4 @@
-import LinkButton from "shared/components/ui/buttons/LinkButton";
+import LinkButton from "shared/components/UI/Buttons/LinkButton";
 
 export default function WelcomePage() {
   return (

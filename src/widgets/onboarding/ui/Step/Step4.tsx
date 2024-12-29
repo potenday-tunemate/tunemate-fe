@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Button from "shared/components/ui/buttons/Button";
+import Button from "shared/components/UI/Buttons/Button";
 
 interface Step4Props {
   onStepChange: (step: number) => void;

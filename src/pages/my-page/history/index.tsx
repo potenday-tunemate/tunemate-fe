@@ -1,10 +1,10 @@
 import { ASSET_PATHS } from "shared/constants/path";
 import { useState } from "react";
-import Container from "shared/components/layout/Container";
-import Header from "shared/components/layout/Header";
-import BottomActionSheet from "shared/components/layout/BottomActionSheet";
+import Container from "shared/components/Layout/Container";
+import Header from "shared/components/Layout/Header";
+import BottomActionSheet from "shared/components/Layout/BottomActionSheet";
 import { MY_DATA } from "widgets/my-page/data";
-import PageLayout from "shared/components/layout/PageLayout";
+import PageLayout from "shared/components/Layout/PageLayout";
 
 export default function HistoryPage() {
   const [isSheetVisible, setSheetVisible] = useState(false);

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "shared/components/ui/buttons/Button";
-import Header from "shared/components/layout/Header";
+import Button from "shared/components/UI/Buttons/Button";
+import Header from "shared/components/Layout/Header";
 import { ASSET_PATHS } from "shared/constants/path";
 
 interface Step5Props {

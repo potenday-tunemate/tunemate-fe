@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Container from "shared/components/Layout/Container";
 import Header from "shared/components/Layout/Header";
 import PageLayout from "shared/components/Layout/PageLayout";
-import Button from "shared/components/ui/buttons/Button";
+import Button from "shared/components/UI/Buttons/Button";
 
 const TAGS_DATA = [
   "활기찬",

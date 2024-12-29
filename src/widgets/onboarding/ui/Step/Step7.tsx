@@ -1,4 +1,4 @@
-import LinkButton from "shared/components/ui/buttons/LinkButton";
+import LinkButton from "shared/components/UI/Buttons/LinkButton";
 import { ASSET_PATHS } from "shared/constants/path";
 
 export default function Step7() {

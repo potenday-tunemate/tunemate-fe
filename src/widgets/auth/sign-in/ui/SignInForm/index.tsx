@@ -1,7 +1,7 @@
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import FormInput from "shared/components/forms/FormInput";
-import Button from "shared/components/ui/buttons/Button";
+import Button from "shared/components/UI/Buttons/Button";
 import { usePostSignInMutation } from "features/auth/api/mutations/usePostSignInMutation";
 import { PostSignInRequestBody } from "features/auth/model/types";
 

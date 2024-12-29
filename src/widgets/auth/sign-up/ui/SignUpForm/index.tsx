@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import FormInput from "shared/components/forms/FormInput";
-import Button from "shared/components/ui/buttons/Button";
+import Button from "shared/components/UI/Buttons/Button";
 import { usePostSignUpMutation } from "features/auth/api/mutations/usePostSignUpMutation";
 import { PostSignUpRequestBody } from "features/auth/model/types";
 
