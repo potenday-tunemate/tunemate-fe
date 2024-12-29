@@ -30,7 +30,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 
 # 3. 프로덕션 의존성만 설치
-RUN yarn install --production
+RUN yarn install
 
 # 4. 빌드된 React 애플리케이션 복사
 COPY --from=builder /app/build ./build
