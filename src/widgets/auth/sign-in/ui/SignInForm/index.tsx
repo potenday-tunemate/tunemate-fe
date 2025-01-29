@@ -30,13 +30,10 @@ export default function SignInForm() {
         email: data.email,
         password: data.password,
       };
-      console.log("signInMutate 호출 전"); // signInMutate 호출 직전에 확인
 
       const response = await signInMutate(body);
-      console.log(response);
       if (response.ok) {
-        console.log("확인");
-        // navigate("/onboarding?step=4");
+        navigate("/onboarding?step=4");
       } else {
         alert(response.message);
       }
