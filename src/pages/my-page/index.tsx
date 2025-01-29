@@ -6,6 +6,7 @@ import UserInfo from "widgets/my-page/ui/UserInfo";
 import HistoryThumbnailList from "widgets/my-page/ui/HistoryThumbnailList";
 import PageLayout from "shared/components/Layout/PageLayout";
 import MyPageHeader from "widgets/my-page/ui/MyPageHeader";
+import { BASE_URL } from "shared/api/index.api";
 
 export default function MyPage() {
   const [isSheetVisible, setIsSheetVisible] = useState(false);
@@ -24,7 +25,7 @@ export default function MyPage() {
     }
 
     // `fetch`로 API 요청
-    fetch("user", {
+    fetch(BASE_URL+"user", {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`, // 인증 토큰을 헤더에 포함
