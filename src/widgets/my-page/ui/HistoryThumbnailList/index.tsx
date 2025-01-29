@@ -12,7 +12,7 @@ export default function HistoryThumbnailList({ userData }: HistoryListProps) {
       {userData && (
         <div>
           <div className="flex items-center justify-between">
-            <p>지금까지 총 {userData.histories.length}개의 감상을 남겼어요.</p>
+            {/* <p>지금까지 총 {userData.histories.length}개의 감상을 남겼어요.</p> */}
 
             {userData.histories.length > 0 && (
               <Link to="/my-page/history">
