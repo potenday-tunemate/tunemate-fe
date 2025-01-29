@@ -17,7 +17,7 @@ export default function MyPage() {
       action: () => {
         console.log("로그아웃");
         setIsSheetVisible(false);
-        window.location.href = BASE_URL+"auth/sign-in";
+        window.location.href = `https://tunemate-fe-production.up.railway.app/`+"auth/sign-in";
       },
     },
     {
