@@ -16,7 +16,8 @@ export const usePostSignInMutation = () => {
     PostSignInRequestBody
   >({
     mutationFn: async (body: PostSignInRequestBody) => {
-      const response = await post("/auth/signin", body);
+      const response = await post("auth/signin", body);
+      console.log(response);
       return response as ApiResponse<PostSignInResponse>;
     },
     onSuccess: (data) => {
