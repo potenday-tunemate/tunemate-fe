@@ -36,7 +36,7 @@ export default function MyPage() {
 
       <Container>
         {/* 사용자 정보 섹션 */}
-        <UserInfo userData={MY_DATA} />
+        {/* <UserInfo userData={MY_DATA} /> */}
 
         {/* 감상 리스트 */}
         <div className="mt-40">
