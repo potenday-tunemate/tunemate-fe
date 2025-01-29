@@ -22,8 +22,6 @@ interface Review {
   artist: Artist;
   genre: Genre;
   year: number;
-  created_at: string | null;
-  updated_at: string | null;
 }
 export default function RecentReviewsPreviewList() {
 

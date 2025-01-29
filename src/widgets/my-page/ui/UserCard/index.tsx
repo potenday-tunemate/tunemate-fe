@@ -1,5 +1,6 @@
 import { ASSET_PATHS } from "shared/constants/path";
 import { UserData } from "../../../../entities/user/index.type";
+import { useEffect, useState } from "react";
 
 interface UserCardProps {
   user: UserData;
