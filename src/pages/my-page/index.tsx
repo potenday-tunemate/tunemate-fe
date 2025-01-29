@@ -25,10 +25,10 @@ export default function MyPage() {
     }
 
     // `fetch`로 API 요청
-    fetch(BASE_URL+"user", {
+    fetch(BASE_URL + "user", {
       method: "GET",
       headers: {
-        "Authorization": `Bearer ${token}`, // 인증 토큰을 헤더에 포함
+        Authorization: `Bearer ${token}`, // 인증 토큰을 헤더에 포함
         "Content-Type": "application/json", // 서버에 전달할 데이터 형식
       },
     })
@@ -42,7 +42,7 @@ export default function MyPage() {
         setUserData(data);
       })
       .catch((error) => {
-        setError(error.message); 
+        setError(error.message);
       });
   }, []);
 
@@ -52,7 +52,8 @@ export default function MyPage() {
       action: () => {
         console.log("로그아웃");
         setIsSheetVisible(false);
-        window.location.href = `https://tunemate-fe-production.up.railway.app/`+"auth/sign-in";
+        window.location.href =
+          `https://tunemate-fe-production.up.railway.app/` + "auth/sign-in";
       },
     },
     {
@@ -78,7 +79,7 @@ export default function MyPage() {
 
         {/* 감상 리스트 */}
         <div className="mt-40">
-          <HistoryThumbnailList userData={userData} />
+          {/* <HistoryThumbnailList userData={userData} /> */}
         </div>
 
         {/* 설정 메뉴 */}
