@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // import { RECENT_REVIEWS_DATA } from "../../data";
 import { useEffect, useState } from "react";
+import { BASE_URL } from "shared/api/index.api";
 
 interface Artist {
   id: number;
@@ -29,7 +30,7 @@ export default function RecentReviewsPreviewList() {
   const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
-    fetch("https://tunemate-be-production.up.railway.app/album")
+    fetch(BASE_URL+"album")
       .then((response) => response.json())
       .then((data) => setReviews(data.data))
       .catch((error) => console.error("Error fetching data:", error));
