@@ -12,7 +12,7 @@ export type ApiRequestParams = Record<
   string | number | boolean | (string | number | boolean)[]
 >;
 
-export const BASE_URL = "https://tunemate-fe-production.up.railway.app/";
+export const BASE_URL = "https://tunemate-be-production.up.railway.app/";
 
 export async function get<T>(
   endpoint: string,
