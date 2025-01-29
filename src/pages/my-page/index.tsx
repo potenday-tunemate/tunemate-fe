@@ -64,6 +64,9 @@ export default function MyPage() {
     },
   ];
 
+  if (error) {
+    return <div>{error}</div>; // 오류가 있을 경우 메시지 표시
+  }
   return (
     <PageLayout>
       <MyPageHeader setIsSheetVisible={setIsSheetVisible} />

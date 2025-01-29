@@ -13,6 +13,9 @@ interface UserInfoProps {
 }
 
 export default function UserInfo({userData}: UserInfoProps) {
+  if (!userData) {
+    return <div>로딩 중...</div>; // userData가 없을 경우 로딩 중 메시지
+  }
   return (
     <div>
       {userData && (
