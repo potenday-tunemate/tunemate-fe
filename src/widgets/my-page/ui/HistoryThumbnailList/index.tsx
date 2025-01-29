@@ -3,7 +3,7 @@ import { ASSET_PATHS } from "shared/constants/path";
 import { Mydata } from "widgets/my-page/data";
 
 interface HistoryListProps {
-  userData: Mydata;
+  userData: Mydata |null;
 }
 
 export default function HistoryThumbnailList({ userData }: HistoryListProps) {

@@ -74,12 +74,11 @@ export default function MyPage() {
 
       <Container>
         {/* 사용자 정보 섹션 */}
-        console.log(userData);
         <UserInfo userData={userData} />
 
         {/* 감상 리스트 */}
         <div className="mt-40">
-          {/* <HistoryThumbnailList userData={userData} /> */}
+          <HistoryThumbnailList userData={userData} />
         </div>
 
         {/* 설정 메뉴 */}
