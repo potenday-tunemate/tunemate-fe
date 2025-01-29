@@ -34,7 +34,8 @@ export default function SignInForm() {
       const response = await signInMutate(body);
 
       if (response.ok) {
-        navigate("/onboarding?step=4");
+        console.log('확인');
+        // navigate("/onboarding?step=4");
       } else {
         alert(response.message);
       }
