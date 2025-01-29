@@ -6,6 +6,7 @@ import UserInfo from "widgets/my-page/ui/UserInfo";
 import HistoryThumbnailList from "widgets/my-page/ui/HistoryThumbnailList";
 import PageLayout from "shared/components/Layout/PageLayout";
 import MyPageHeader from "widgets/my-page/ui/MyPageHeader";
+import { BASE_URL } from "shared/api/index.api";
 
 export default function MyPage() {
   const [isSheetVisible, setIsSheetVisible] = useState(false);
@@ -16,7 +17,7 @@ export default function MyPage() {
       action: () => {
         console.log("로그아웃");
         setIsSheetVisible(false);
-        window.location.href = "https://tunemate-fe-production.up.railway.app/auth/sign-in";
+        window.location.href = BASE_URL+"auth/sign-in";
       },
     },
     {
