@@ -14,7 +14,7 @@ export default function HistoryThumbnailList({ userData }: HistoryListProps) {
           <div className="flex items-center justify-between">
             {/* <p>지금까지 총 {userData.histories.length}개의 감상을 남겼어요.</p> */}
 
-            {userData.histories.length > 0 && (
+            {/* {userData.histories.length > 0 && (
               <Link to="/my-page/history">
                 <img
                   src={`${ASSET_PATHS.ICONS}/basic/ico_arrow_gray_right.svg`}
@@ -22,7 +22,7 @@ export default function HistoryThumbnailList({ userData }: HistoryListProps) {
                   className="w-14"
                 />
               </Link>
-            )}
+            )} */}
           </div>
 
           <div className="mt-20">
