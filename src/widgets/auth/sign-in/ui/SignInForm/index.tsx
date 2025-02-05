@@ -13,8 +13,8 @@ export default function SignInForm() {
   const methods = useForm({
     mode: "all",
     defaultValues: {
-      email: "",
-      password: "",
+      email: "user@example.com",
+      password: "securePassword123",
     },
   });
 
