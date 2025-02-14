@@ -63,7 +63,7 @@ const routes: RouteObject[] = [
     element: <AlbumDetailPage />,
   },
   {
-    path: "/my-page",
+    path: "/my-page/:id",
     element: <MyPage />,
   },
   {

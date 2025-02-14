@@ -9,8 +9,9 @@ interface History {
 }
 
 export interface Mydata {
+  id: string;
   profile: string | null;
-  user_name: string;
+  nickname: string;
   play_count: number;
   followers: number;
   following: number;
@@ -21,8 +22,9 @@ export interface Mydata {
 
 // dummy
 export const MY_DATA: Mydata = {
+  id:'1',
   profile: null,
-  user_name: "name",
+  nickname: "name",
   play_count: 15,
   followers: 3,
   following: 3,
